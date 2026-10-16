@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Award, ShieldCheck, Lock, ArrowRight, Sparkles } from 'lucide-react';
 import { ABOUT_PILLARS } from '../data/content';
+import aboutImage from "../assets/about.jpeg"
 
 interface AboutUsProps {
   onOpenConsultation: () => void;
@@ -28,42 +29,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ onOpenConsultation }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Cyberpunk Studio Office Visual */}
           <div className="lg:col-span-6 relative group">
-            {/* Ambient Backlight Glow */}
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#00f0ff]/20 via-transparent to-[#ff1a53]/20 blur-xl opacity-75 group-hover:opacity-100 transition-opacity" />
-
-            <div className="relative rounded-2xl overflow-hidden bg-[#060916] border border-white/10 shadow-2xl">
-              {/* Studio Room Render */}
-              <div className="relative h-[340px] sm:h-[420px] w-full bg-gradient-to-br from-[#0c1228] via-[#050711] to-[#0a0514] p-6 flex flex-col justify-between overflow-hidden">
-                {/* Neon Wall Lighting Strips */}
-                <div className="absolute top-0 left-8 w-1 h-36 bg-gradient-to-b from-[#ff1a53] to-transparent shadow-[0_0_15px_#ff1a53]" />
-                <div className="absolute top-0 right-10 w-1 h-44 bg-gradient-to-b from-[#00f0ff] to-transparent shadow-[0_0_15px_#00f0ff]" />
-                <div className="absolute top-12 left-0 w-32 h-1 bg-gradient-to-r from-[#ff1a53] to-transparent shadow-[0_0_15px_#ff1a53]" />
-
-                {/* Back Wall Studio Logo Sign */}
-                <div className="relative z-10 mx-auto my-auto text-center p-6 rounded-2xl bg-[#030612]/80 backdrop-blur-md border border-white/10 shadow-[0_0_35px_rgba(0,240,255,0.25)] flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#00f0ff] to-[#0051ff] flex items-center justify-center shadow-[0_0_20px_rgba(0,240,255,0.8)] mb-3">
-                    <Sparkles className="w-7 h-7 text-white" />
-                  </div>
-                  <h4 className="text-xl sm:text-2xl font-black text-white tracking-widest font-['Outfit']">
-                    NEXT PRIME
-                  </h4>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-[10px] tracking-[0.3em] text-[#ff1a53] uppercase font-bold">
-                      HEADQUARTERS
-                    </span>
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  </div>
-                </div>
-
-                {/* Studio Desk & Hardware Silhouettes */}
-                <div className="relative z-10 w-full pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs text-slate-400 font-mono">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#00f0ff]" /> Creative Operations Lab
-                  </span>
-                  <span>Est. 2021</span>
-                </div>
-              </div>
-            </div>
+            <img src={aboutImage} alt="" className='h-120 rounded-3xl' />
           </div>
 
           {/* Right Column: Copy & 2x2 Feature Pillars */}
