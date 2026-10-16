@@ -1,5 +1,6 @@
 import React from 'react';
 import { NAV_LINKS } from '../data/content';
+import logo from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -11,40 +12,8 @@ export const Footer: React.FC = () => {
         {/* Main Footer Row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10">
           {/* Brand Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff] to-[#0066ff] rounded-xl blur-[6px] opacity-70 group-hover:opacity-100 transition-opacity" />
-              <svg
-                className="relative w-9 h-9 drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]"
-                viewBox="0 0 44 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 34V10L24 26V10H32V34L18 18V34H10Z"
-                  fill="url(#footerLogoGrad)"
-                />
-                <defs>
-                  <linearGradient id="footerLogoGrad" x1="10" y1="10" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#00f0ff" />
-                    <stop offset="0.5" stopColor="#0080ff" />
-                    <stop offset="1" stopColor="#0051ff" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            <div className="flex flex-col">
-              <span className="text-white font-extrabold text-lg tracking-tight leading-none font-['Outfit']">
-                NEXT PRIME
-              </span>
-              <div className="flex items-center gap-1.5 mt-0.5">
-                <span className="text-[9px] tracking-[0.28em] text-[#ff1a53] font-semibold uppercase leading-none">
-                  MEDIA
-                </span>
-                <span className="h-[1px] w-5 bg-gradient-to-r from-[#ff1a53] to-transparent" />
-              </div>
-            </div>
+          <a href="#home" className='flex items-center gap-3 group'>
+            <img src={logo} alt="Brand Logo" className='w-30 rounded-xl' />
           </a>
 
           {/* Navigation Links */}

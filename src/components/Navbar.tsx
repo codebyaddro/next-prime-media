@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X, Sparkles } from 'lucide-react';
 import { NAV_LINKS } from '../data/content';
+import logo from '../assets/logo.png';
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -29,41 +30,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group">
-          {/* Cyber Ribbon "N" Mark */}
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff] to-[#0066ff] rounded-xl blur-[8px] opacity-70 group-hover:opacity-100 transition-opacity" />
-            <svg
-              className="relative w-10 h-10 drop-shadow-[0_0_12px_rgba(0,240,255,0.8)] transition-transform duration-300 group-hover:scale-105"
-              viewBox="0 0 44 44"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 34V10L24 26V10H32V34L18 18V34H10Z"
-                fill="url(#logoGrad)"
-              />
-              <defs>
-                <linearGradient id="logoGrad" x1="10" y1="10" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#00f0ff" />
-                  <stop offset="0.5" stopColor="#0080ff" />
-                  <stop offset="1" stopColor="#0051ff" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          <div className="flex flex-col">
-            <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-none font-['Outfit']">
-              NEXT PRIME
-            </span>
-            <div className="flex items-center gap-1.5 mt-0.5">
-              <span className="text-[10px] tracking-[0.28em] text-[#ff1a53] font-semibold uppercase leading-none">
-                MEDIA
-              </span>
-              <span className="h-[1px] w-6 bg-gradient-to-r from-[#ff1a53] to-transparent" />
-            </div>
-          </div>
+        <a href="#home" className='flex items-center gap-3 group'>
+          <img src={logo} alt="Brand Logo" className='w-30 rounded-xl' />
         </a>
 
         {/* Desktop Navigation Links */}
